@@ -1,0 +1,28 @@
+{% extends 'bobaDrinks/base.html' %}
+
+{% block orderForm %}
+<br>
+<h1 style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, Times, serif;" align="center">How do you drink your boba?</h1>
+<h4 style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, Times, serif;" align="center">(where each one is made with love)</h4>
+
+<br>
+<div class="container" align="center">
+    <form method="POST" class="post-form">{% csrf_token %}
+           
+            {{ cForm.as_p }}
+
+            {{ dForm.as_p }}
+        
+        <button type="submit" class="save btn-dark">Submit!</button>
+    
+    </form>    
+</div>
+
+{% endblock %}
+
+
+       
+       
+       
+     
+        
